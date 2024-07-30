@@ -1,0 +1,6 @@
+pip==24.2
+selenium==4.22.0
+pytest-html==4.1.1
+pandas==2.2.2
+pyopenxl==3.1.5
+pytest==8.3.2

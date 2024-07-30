@@ -1,0 +1,1387 @@
+{
+  "id": "4d2fe0fd-9931-4a6b-844a-6d9b73cde41f",
+  "version": "2.0",
+  "name": "daiichi_test",
+  "url": "https://elearning.dai-ichi-life.com.vn/",
+  "tests": [{
+    "id": "fa57e1ff-e8ac-42b5-8707-98ded1f382f8",
+    "name": "TC_001_001",
+    "commands": [{
+      "id": "879e5280-1fbe-4111-840c-69f3c50c0404",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c998747d-0c55-46c7-b31f-a2c0cfe6cc6e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "841cd225-3e17-46c8-86e1-9e2278359430",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "36d20e33-4c57-4dd6-99de-c7f2f3db5957",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1713290f-e304-4aac-91fc-0473aa6413aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d274e134-8f2f-4bca-a2bb-7ca4b9a362f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(13) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dfde6d0-d7be-49bf-8184-c99da152b41b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd605165-015e-434e-8bc3-c92e10f1369e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c4a7c6a8-1956-4b32-98b4-b478897795bb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@name='password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1271acf3-f4b9-4ac1-b131-b76908f04d2d",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e204a658-b1ac-4314-a0fa-818062d24c9d",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "thoang.phuc"
+    }, {
+      "id": "b9288e28-0352-4633-9ee9-846703528ad9",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "823ba253-fb21-405c-8675-bcb163bab42c",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Abc@123456"
+    }, {
+      "id": "99e5bb22-21dd-4db8-8668-70a7d9748ada",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "92aabe94-1731-4b59-9381-c2f26487dcea",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "760a7dbc-0798-4d1c-909d-c4fb7c1b48b8",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "https://elearning.dai-ichi-life.com.vn/index.php"
+    }, {
+      "id": "17977772-2257-470b-8cb2-08bf5eebf637",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9862c501-a6bb-4348-b37a-76ac39096fd2",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(13) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68f797ae-15ff-49cd-a26d-e3d96cc894cc",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "05ca2b09-dd07-481a-98ad-afe10b2ab487",
+    "name": "TC_001_002",
+    "commands": [{
+      "id": "b32e4f25-b657-4ce0-acef-5e9a29835da4",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f945ea9-2810-4aa4-a45a-e89a3313b055",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e774ca25-f13e-4dac-bef4-a351e10dbf82",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "00e1843a-a3e0-49be-8c40-589296ccaf98",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c67715e4-ac9d-49e4-a5d5-64091464f82a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a08e26b-bef4-4481-a277-a22930051c2e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(13) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b265a5c8-a447-407c-b207-e50fd44f7a6c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57db211f-e440-4fd5-94f0-80bfffb92bfb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d47e351b-eff2-43cf-8137-cf9263790cdb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@name='password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f7be7e5-7e5f-48d2-8ad8-eb5278a14f9f",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21f61b5b-3015-4178-aa98-0517619601eb",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "dhh.kien"
+    }, {
+      "id": "cbca06be-4f84-49f8-947f-ddcaffb5539f",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0b9dfd1-3287-44fb-b299-6c4b1884e78e",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Hk532@1632"
+    }, {
+      "id": "3a5551cb-d5e0-41c2-a8d7-4bd439946be3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1642238b-9df2-49ec-be0d-8d1493bca0b3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Vui lòng click vào đây để về trang chủ.",
+      "targets": [
+        ["linkText=Vui lòng click vào đây để về trang chủ.", "linkText"],
+        ["css=.errorcode > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Vui lòng click vào đây để về trang chủ.')]", "xpath:link"],
+        ["xpath=//section[@id='region-main']/gmessage/div/div/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://elearning.dai-ichi-life.com.vn')])[5]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Vui lòng click vào đây để về trang chủ.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a30a9403-6c03-4085-b952-8fe4ad1640a0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=input:nth-child(1)",
+      "targets": [
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Continue']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/gmessage/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f9e77c7-b2f7-430e-8424-0a9654f318ca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Vui lòng click vào đây để về trang chủ.",
+      "targets": [
+        ["linkText=Vui lòng click vào đây để về trang chủ.", "linkText"],
+        ["css=.errorcode > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Vui lòng click vào đây để về trang chủ.')]", "xpath:link"],
+        ["xpath=//section[@id='region-main']/gmessage/div/div/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://elearning.dai-ichi-life.com.vn')])[5]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Vui lòng click vào đây để về trang chủ.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43db4d96-862a-412e-9ef3-c854453fc9d8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2963e7c2-599d-4846-8f1b-f8fee9991de5",
+    "name": "TC_001_003",
+    "commands": [{
+      "id": "8a4980da-ce9b-4b28-bbc6-7f6261775a1b",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ca4314c-8dd8-4e00-b0dc-e7795de01665",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddff3383-02ce-45e7-bb8e-b78759cd7cc7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "cff709c1-3bb8-4b75-8bfb-311b25da2025",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50faecd9-af8f-4b39-a6e1-346cf6a50343",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1699ce88-a2bc-4b1b-8f86-29a904ab82d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(13) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5fb4f54-8127-4412-87fd-2a76cc7d0414",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1373f316-bbf5-4057-a319-684c2f41abad",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "438b3f3f-8fab-494e-bfae-c69d667d9f85",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@name='password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63926815-d139-4c29-8a88-c662521b1c38",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec809c80-fa22-40b0-a7f7-523b951a5080",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "dhh.kien"
+    }, {
+      "id": "ea00be13-346f-4e98-8004-5ca9b24377b8",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9a14140d-1eb6-4c4d-a21b-4edecba49ebf",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "704cf383-03fa-48ad-8197-4c9455b466c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e25b3421-12d0-48ab-b103-a5a08e20f695",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "5d00d4a8-2c13-4ae5-ad5a-1a8032fdd491",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login&errorcode=3"
+    }, {
+      "id": "d395767b-2630-4f2f-abee-73c31069bc1e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce0b37aa-3c1c-4fe8-b471-dbc86c2ba96b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@name='password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbc2f68d-6976-46cc-a641-6b88a2433810",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b6359c6c-9f50-4b8a-95ed-bb7e8613af16",
+    "name": "TC_001_004",
+    "commands": [{
+      "id": "d1f12267-fbed-43eb-b075-a60daf1110c4",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "808b5a1e-815d-4e01-9ede-77bba3abb465",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d7eefc2-2b5e-4e95-9483-236e2328978c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "d9ca67fe-e96d-473b-8075-1c33c9aa42fe",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c93a3b89-2b5b-4361-ae85-bfbfd28f1622",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4e6a587-954e-4b8a-8a55-ac5dc1941c21",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(13) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7230defc-972a-487a-b583-ff9ccb0e6558",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4369343c-4e15-458d-ae83-ed2695b49fca",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6df2b24c-aa05-40bc-8fc1-e586c751cdfc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@name='password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9353b67-7244-4307-9a0d-b75849c21e5a",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c99eae96-4bec-4551-aeb5-c58dcab47657",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "dhh.kien"
+    }, {
+      "id": "f1ee6e71-4fd9-4841-bfc2-794b3e931edc",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "563e3aa8-00ab-48f3-a06e-6856115667fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cadf20b0-c510-4416-a40d-8a3fc22cf668",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "64cc0290-03a6-4b66-9e08-1d9774ad3ad9",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login"
+    }, {
+      "id": "5ca31d8f-07bd-4013-b160-9853c35416f8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91da9415-7181-45fc-8882-0664ad98f893",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@name='password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ac4ddb0-0c88-4380-8294-4df6cc66e703",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bb72c680-5e2d-4628-abf1-fb70ff196c77",
+    "name": "TC_002_001",
+    "commands": [{
+      "id": "da40d379-f371-42bc-986a-4bb4db99e0b2",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90f0b791-9fde-4c7e-8d2e-015cf0fe9192",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c0dcb55-5e02-499f-8726-fba616a82a23",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "df632e23-e2b7-497f-8d36-7a42976802b2",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0a075ed-e864-432c-a21d-7792ab7602c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "185787eb-9a6d-42ec-9180-4641679a3a61",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "thoang.phuc"
+    }, {
+      "id": "0f4d778d-e390-40b3-9667-59255f81634b",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a04cab45-3507-4bf1-aa04-04b190cac67a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Abc@123456"
+    }, {
+      "id": "3391866f-e7f3-48fc-8804-c5354fcb8fb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab002e83-3edf-4742-b017-293c357703dd",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87b7d129-88e8-4a88-a3cb-3307cadf1944",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "fcca02b6-1ffc-41aa-8eea-511b1745a97e",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "https://elearning.dai-ichi-life.com.vn/index.php"
+    }, {
+      "id": "062ce9de-972c-43b6-a006-febd70b84e68",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3897c460-bdbc-48d5-97cd-ace0db32aae6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(13) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09388b18-de65-45a1-a146-ce6f94a830b9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@id='username']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc474c6d-42bb-4298-a2a7-0980d47367ec",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//input[@name='password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a557d8d4-b5b8-41cd-91d9-80faed41f93d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "b3fa8978-04ba-4fbd-b96c-a927a39f731f",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login"
+    }, {
+      "id": "641d550c-66db-49dc-b2d5-802e20389bd1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "56cba13a-85d1-463e-9659-8235eb066cf1",
+    "name": "TC_003_001",
+    "commands": [{
+      "id": "73a3ed31-934b-4889-bbd1-b401cc64461f",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad0ea4cf-551b-4385-ae38-92bcd806a0da",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c834226f-f7c6-4c0c-b853-a723b3e48c22",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "362477ef-5c6a-4fa0-a62e-fc1613dc3543",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc3fa405-3799-4d90-8c43-27ff1f9e0111",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d690ca2-7b2e-4205-9337-60707c4c0970",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "thoang.phuc"
+    }, {
+      "id": "bad3df84-4f23-4317-9ff8-447e662b00ae",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4567fbf4-1037-41a7-9180-a0b0fe9843ac",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Abc@123456"
+    }, {
+      "id": "7ffbdc7f-b694-424a-acd8-7d24258cceba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d49c366-902c-4041-bc5e-6134ea177e3c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06e5bf9d-c447-4249-bdb3-878fd166799e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "443ff8b1-f2b4-4206-bfc8-84c580878773",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(5) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "090be134-af07-4338-815a-bae10d3022cc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc",
+      "targets": [
+        ["css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc", "css:finder"],
+        ["xpath=//div[@id='content-main']/div[2]/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dfe6a29-9ec6-4d89-85de-eb3ae2b40ef3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Chi tiết",
+      "targets": [
+        ["linkText=Chi tiết", "linkText"],
+        ["css=.show:nth-child(2) .col-md-3:nth-child(1) .btn-views:nth-child(4) > .link-btn-views", "css:finder"],
+        ["xpath=//a[contains(text(),'Chi tiết')]", "xpath:link"],
+        ["xpath=//div[@id='content-main']/div[2]/div/div/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/index.php?_mod=library&_view=ebook&_lay=detail&id=4')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Chi tiết')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80803a45-20f9-4083-b660-c234166f78f1",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='content-main']/h4/span",
+      "targets": [],
+      "value": "TÀI LIỆU \"NỀN TẢNG THÀNH CÔNG\" - FFS - PHẦN 01 - KIẾN THỨC CƠ BẢN VỀ BẢO HIỂM - AGENCY"
+    }, {
+      "id": "82d91ca7-8167-4ab3-a48a-2ec447f9c0a1",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b969deef-5c3d-4064-aafe-32b2b97236e7",
+    "name": "TC_003_002",
+    "commands": [{
+      "id": "63bb8b4e-c119-49ff-a112-f1de9e8cbd4e",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7a42b35-961a-4b44-a88a-0e65e6175954",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "249f5c6c-47f9-4c90-b65b-c0f3f0b22eec",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "363255ef-7dda-4b6d-989b-773b4a1ea8ee",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "383c5f63-48a0-461c-b0ed-d47155b7cb86",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ded166ad-fb70-4d43-994d-c3094781ecd9",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "thoang.phuc"
+    }, {
+      "id": "9a3937a1-7a9f-4cff-ad2e-71787b36424f",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d239234-2215-4203-b0be-30e2b9c9ef98",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Abc@123456"
+    }, {
+      "id": "d1e69a72-463e-428a-a188-fbb66587bd78",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "66a3e733-7c0e-42a1-8937-20900d41c8c8",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ba2ecd1-a6e0-425a-9911-27c74964ce06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55bac632-dcd8-47b8-b765-c269d7a29e7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(5) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "688800f0-77be-4df2-8385-0b8f365c689d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc",
+      "targets": [
+        ["css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc", "css:finder"],
+        ["xpath=//div[@id='content-main']/div[2]/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "035d9a0e-1d8a-43c9-8425-c9e00331b991",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9118b7d0-04ad-4826-9cc1-a8aa89000da7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tải về",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c798516-57eb-48f3-844d-1ed4ed3fd23d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4f0c5e34-e066-4ce8-bb41-497ba9ae4ed9",
+    "name": "TC_003_003",
+    "commands": [{
+      "id": "204864a5-24fd-4e77-a064-e894daa214f1",
+      "comment": "",
+      "command": "open",
+      "target": "https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "895d0f2c-6659-4d46-ab24-f4b16f2e63c7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x656",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c60dbde0-3a21-4736-8537-164e6a5e2c11",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "0dd1929c-2acc-4d5f-908f-044c0f95aaeb",
+      "comment": "",
+      "command": "if",
+      "target": "${pageurl}.includes('login') == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a134367-afef-452f-b10f-8bf4a554f589",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a69c0594-655a-4501-964e-468cf8deb196",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "thoang.phuc"
+    }, {
+      "id": "51535e07-8195-48a8-bf89-900ec1e8bc76",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5248f166-02f3-48d4-a51b-7154c70b6f10",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.login-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Abc@123456"
+    }, {
+      "id": "3715044a-ee39-483d-9002-beffe6b07483",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-ghost",
+      "targets": [
+        ["css=.btn-ghost", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='frm-login']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e959bf6d-c03a-49f2-b436-38f27bccdda7",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f23f3285-6c55-4fd0-82e0-070dd7949fe5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.show-sub",
+      "targets": [
+        ["css=.show-sub", "css:finder"],
+        ["xpath=//a[contains(text(),'Trần Hoàng Phúc')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b40bb0a-75e9-4506-8261-8ef40f89544a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#sub-menu-top1 > li:nth-child(5) > a",
+      "targets": [
+        ["css=#sub-menu-top1 > li:nth-child(13) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Đăng xuất')]", "xpath:link"],
+        ["xpath=//ul[@id='sub-menu-top1']/li[13]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login/logout.php?sesskey=e0XmfnMehA')]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d5913f3-e741-4039-9da0-b5e8a3db20f0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc",
+      "targets": [
+        ["css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc", "css:finder"],
+        ["xpath=//div[@id='content-main']/div[2]/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "251130bb-c3fb-4586-b29f-351bf7fa6547",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.show:nth-child(2) .col-md-3:nth-child(1) > .desc",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "747a6b6b-0908-49b3-926e-bd51dbadc9d7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Xem trực tuyến",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdb4a0dc-0e1d-43b0-b75f-cc977aa46828",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5a2af081-dba2-4f5c-8b7d-f7004f1750e4",
+    "name": "Sign In",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fa57e1ff-e8ac-42b5-8707-98ded1f382f8", "05ca2b09-dd07-481a-98ad-afe10b2ab487", "2963e7c2-599d-4846-8f1b-f8fee9991de5", "b6359c6c-9f50-4b8a-95ed-bb7e8613af16"]
+  }, {
+    "id": "23a44036-e1ff-4010-9585-61ae3c812f41",
+    "name": "Sign Out",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bb72c680-5e2d-4628-abf1-fb70ff196c77"]
+  }, {
+    "id": "f4eea5b5-1f7f-416c-a3ac-2657030122ab",
+    "name": "Library",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["56cba13a-85d1-463e-9659-8235eb066cf1", "b969deef-5c3d-4064-aafe-32b2b97236e7", "4f0c5e34-e066-4ce8-bb41-497ba9ae4ed9"]
+  }],
+  "urls": ["https://elearning.dai-ichi-life.com.vn/"],
+  "plugins": []
+}
