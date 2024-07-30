@@ -1,9 +1,13 @@
 # An example of using Selenium WebDriver and Python for test automation
 To run the project, follow these steps belows:</br>
-1. Install dependencies:</br>
-   ```pip install -r requirements.txt```</br>
-2. Run:
-   ```pytest (test method)? (--html=./report/report.html)?```</br>
+1. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Run:
+   ```
+   pytest (test method)? (--html=./report/report.html)?
+   ```
    Where:
    <ul>
     <li>
