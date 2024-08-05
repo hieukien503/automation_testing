@@ -26,7 +26,7 @@ class TestSignIn:
             driver.close()
 
         except (Exception, WebDriverException) as e:
-            mlogger.exception(e.msg)
+            mlogger.exception(exc_info=True)
     
     @pytest.mark.parametrize("username, password", gb.accounts['Failed'])
     def test_sign_in_failed(self, username, password, init_driver):
@@ -38,7 +38,7 @@ class TestSignIn:
             driver.close()
 
         except (Exception, WebDriverException) as e:
-            mlogger.exception(e.msg)
+            mlogger.exception(exec_info=True)
     
     @pytest.mark.parametrize("username, password", gb.accounts['Error'])
     def test_sign_in_error_click_link(self, username, password, init_driver):
@@ -55,7 +55,7 @@ class TestSignIn:
             driver.close()
 
         except (Exception, WebDriverException) as e:
-            mlogger.exception(e.msg)
+            mlogger.exception(exec_info=True)
     
     @pytest.mark.parametrize("username, password", gb.accounts['Error'])
     def test_sign_in_error_click_button(self, username, password, init_driver):
@@ -72,7 +72,7 @@ class TestSignIn:
             driver.close()
 
         except (Exception, WebDriverException) as e:
-            mlogger.exception(e.msg)
+            mlogger.exception(exec_info=True)
     
     @pytest.mark.parametrize("username, password", gb.accounts['Empty'])
     def test_sign_in_empty(self, username, password, init_driver):
@@ -84,4 +84,4 @@ class TestSignIn:
             driver.close()
 
         except (Exception, WebDriverException) as e:
-            mlogger.exception(e.msg)
+            mlogger.exception(exec_info=True)

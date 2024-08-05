@@ -1,6 +1,8 @@
 pip==24.2
-selenium==4.22.0
+selenium==4.23.1
 pytest-html==4.1.1
 pandas==2.2.2
 pyopenxl==3.1.5
 pytest==8.3.2
+html2image==2.0.4.3
+adaptivecardbuilder==0.0.9

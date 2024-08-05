@@ -1,0 +1,10 @@
+[11868:35380:0801/142323.398:WARNING:chrome_main_delegate.cc(845)] This is Chrome version 127.0.2651.74 (not a warning)
+[11868:35380:0801/142323.801:WARNING:activity_log_policy.cc(68)] Scheduling init
+[11868:35380:0801/142323.802:WARNING:activity_log_policy.cc(68)] Scheduling init
+[11868:35380:0801/142323.843:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[11868:35380:0801/142325.038:ERROR:fallback_task_provider.cc(127)] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/739782.
+[11868:35380:0801/142327.564:ERROR:fallback_task_provider.cc(127)] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/739782.
+[11868:35380:0801/142330.672:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://www.chromium.org/developers/design-documents/create-amazing-password-forms) %o", source: https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login (0)
+[58364:54884:0801/142338.829:INFO:extractor_impl.cc(983)] ExtractorImpl::SetIsPendingEEConfig : 1
+[11868:35380:0801/142340.445:WARNING:underside_helper.cc(1688)] If test does not need FrontLoad, this may be expected. SetFrontLoadDecision: 8
+[11868:35380:0801/142342.991:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://www.chromium.org/developers/design-documents/create-amazing-password-forms) %o", source: https://elearning.dai-ichi-life.com.vn/index.php?_mod=user&_view=user&_lay=login (0)
