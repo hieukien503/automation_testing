@@ -4,6 +4,10 @@ from lib import (
     webdriver,
 )
 
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from utils.msteams_notification import sendAdaptiveCard
+
 @pytest.fixture(params=['chrome', 'edge'], autouse=True)
 def init_driver(request):
     if request.param == 'chrome':
@@ -12,7 +16,7 @@ def init_driver(request):
         options.add_argument('--verbose')
         options.add_argument(r'--log-path=.\logs\chromedriver.log')
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        service = webdriver.ChromeService('./driver/chromedriver.exe')
+        service = webdriver.ChromeService(ChromeDriverManager().install())
         driver = webdriver.Chrome(
             service=service,
             options=options
@@ -24,7 +28,7 @@ def init_driver(request):
         options.add_argument('--verbose')
         options.add_argument(r'--log-file=.\logs\msedgedriver.log')
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        service = webdriver.EdgeService('./driver/msedgedriver.exe')
+        service = webdriver.EdgeService(EdgeChromiumDriverManager().install())
         driver = webdriver.Edge(
             service=service,
             options=options
@@ -44,3 +48,6 @@ def pytest_runtest_makereport(item, call):
         end_idx = report.nodeid.index("-")
         if end_idx != -1:
             report.nodeid = report.nodeid[:end_idx] + ']'
+
+def pytest_terminal_summary(terminalreporter, exitstatus, config):
+    sendAdaptiveCard()

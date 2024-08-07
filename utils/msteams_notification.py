@@ -1,27 +1,49 @@
-import urllib3
-import json
+from pymsteams import connectorcard
+from html2image import Html2Image
+from lib import gb
+from adaptivecardbuilder import *
+from datetime import datetime
 
-MSTEAMS_WEBHOOK = "https://dlvn.webhook.office.com/webhookb2/2c926cd4-6a47-4403-8344-66b5b5f9543a@c19239e5-1337-436d-800a-1b4283c280dd/IncomingWebhook/36f93937606b437cbea3d8736de5ca3b/07f23511-0004-4a49-94db-b2b8b16308cf"
+import base64
+import asyncio
 
-class TeamsWebhookException(Exception):
-    """custom exception for failed webhook call"""
-    pass
+def generateImgFromHTML(pathToHTML: str ='./report/report.html', pathToCSS: str ='./report/assets/style.css') -> str:
+    hti = Html2Image(output_path='./screenshot/', size=(1024, 768))
+    hti.screenshot(
+        html_str=open(pathToHTML, 'r').read(),
+        css_str=open(pathToCSS, 'r').read(),
+        save_as='test_report.png'
+    )
 
-class ConnectorCard:
-    def __init__(self, hookurl, http_timeout=60):
-        self.http = urllib3.PoolManager()
-        self.payload = {}
-        self.hookurl = hookurl
-        self.http_timeout = http_timeout
+    with open('./screenshot/test_report.png', 'rb') as f:
+        encoded_string = base64.b64encode(f.read()).decode('utf-8')
+    
+    return encoded_string
 
-    def send(self):
-        headers = {"Content-Type":"application/json"}
-        r = self.http.request(
-                'POST',
-                f'{self.hookurl}',
-                body=json.dumps(self.payload).encode('utf-8'),
-                headers=headers, timeout=self.http_timeout)
-        if r.status == 200: 
-            return True
-        else:
-            raise TeamsWebhookException(r.reason)
+def sendAdaptiveCard():
+    encoded_string = generateImgFromHTML()
+    myTeamsMessage = connectorcard(hookurl=gb.MSTEAMS_WEBHOOK)
+    card = AdaptiveCard(schema=gb.SCHEMA_URL, version="1.5")
+    card.add([
+        TextBlock(text='Result Using Pytest', size='ExtraLarge', weight='Bolder', wrap='true', spacing='None'),
+        TextBlock(text=f"{datetime.now().strftime('%d/%m/%Y')} Report Summary",
+                       weight='Bolder', wrap='true', spacing='None'),
+        Image(url=f'data:image/png;base64,{encoded_string}', msTeams={"allowExpand": "true"})
+    ])
+
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    
+    myTeamsMessage.payload = {
+        "type": "message",
+        "attachments": [
+            {
+                "contentType":"application/vnd.microsoft.card.adaptive",
+                "contentUrl": "null",
+                "content": loop.run_until_complete(card.to_dict(version='1.5', schema=gb.SCHEMA_URL))
+            }
+        ]
+    }
+
+    myTeamsMessage = myTeamsMessage.color("good")
+    myTeamsMessage.send()
