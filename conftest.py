@@ -45,7 +45,7 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     report = outcome.get_result()
     if "[" in report.nodeid and "]" in report.nodeid:
-        end_idx = report.nodeid.index("-")
+        end_idx = report.nodeid.find("-")
         if end_idx != -1:
             report.nodeid = report.nodeid[:end_idx] + ']'
 
