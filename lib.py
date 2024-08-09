@@ -1,4 +1,4 @@
-import pytest, pytest_html
+import pytest
 import GlobalConstant as gb
 import pandas as pd
 import re
